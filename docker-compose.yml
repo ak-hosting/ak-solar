@@ -1,0 +1,195 @@
+# AK Solar - Docker Compose
+# Güneş enerjisi web sitesi için container orchestration
+
+version: '3.8'
+
+services:
+  # Ana web sitesi
+  web:
+    build: .
+    container_name: ak-solar-web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./assets:/usr/share/nginx/html/assets
+      - ./logs:/var/log/nginx
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - ak-solar-network
+    depends_on:
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Redis cache (opsiyonel)
+  redis:
+    image: redis:alpine
+    container_name: ak-solar-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - ak-solar-network
+    command: redis-server --appendonly yes
+
+  # PHP backend (gelecekte)
+  # php:
+  #   image: php:8.1-fpm-alpine
+  #   container_name: ak-solar-php
+  #   volumes:
+  #     - ./assets/php:/var/www/html
+  #     - ./env.example:/var/www/html/.env
+  #   environment:
+  #     - PHP_FPM_USER=www-data
+  #     - PHP_FPM_GROUP=www-data
+  #   restart: unless-stopped
+  #   networks:
+  #     - ak-solar-network
+
+  # MySQL database (gelecekte)
+  # mysql:
+  #   image: mysql:8.0
+  #   container_name: ak-solar-mysql
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - mysql_data:/var/lib/mysql
+  #     - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=rootpassword
+  #     - MYSQL_DATABASE=ak_solar
+  #     - MYSQL_USER=aksolar
+  #     - MYSQL_PASSWORD=aksolar123
+  #   restart: unless-stopped
+  #   networks:
+  #     - ak-solar-network
+
+  # phpMyAdmin (gelecekte)
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   container_name: ak-solar-phpmyadmin
+  #   ports:
+  #     - "8080:80"
+  #   environment:
+  #     - PMA_HOST=mysql
+  #     - PMA_PORT=3306
+  #     - PMA_USER=aksolar
+  #     - PMA_PASSWORD=aksolar123
+  #   restart: unless-stopped
+  #   networks:
+  #     - ak-solar-network
+  #   depends_on:
+  #     - mysql
+
+  # Nginx reverse proxy (production için)
+  # nginx-proxy:
+  #   image: nginx:alpine
+  #   container_name: ak-solar-nginx-proxy
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx-proxy.conf:/etc/nginx/nginx.conf
+  #     - ./ssl:/etc/nginx/ssl
+  #   restart: unless-stopped
+  #   networks:
+  #     - ak-solar-network
+  #   depends_on:
+  #     - web
+
+  # Certbot SSL (production için)
+  # certbot:
+  #   image: certbot/certbot
+  #   container_name: ak-solar-certbot
+  #   volumes:
+  #     - ./ssl:/etc/letsencrypt
+  #     - ./webroot:/var/www/html
+  #   command: certonly --webroot --webroot-path=/var/www/html --email ak@ak-pro.com --agree-tos --no-eff-email -d aksolar.com -d www.aksolar.com
+  #   networks:
+  #     - ak-solar-network
+
+  # Monitoring (opsiyonel)
+  # prometheus:
+  #   image: prom/prometheus
+  #   container_name: ak-solar-prometheus
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+  #   restart: unless-stopped
+  #   networks:
+  #     - ak-solar-network
+
+  # Grafana (opsiyonel)
+  # grafana:
+  #   image: grafana/grafana
+  #   container_name: ak-solar-grafana
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - grafana_data:/var/lib/grafana
+  #   environment:
+  #     - GF_SECURITY_ADMIN_PASSWORD=admin123
+  #   restart: unless-stopped
+  #   networks:
+  #     - ak-solar-network
+
+  # Backup service (opsiyonel)
+  # backup:
+  #   image: alpine:latest
+  #   container_name: ak-solar-backup
+  #   volumes:
+  #     - ./backup:/backup
+  #     - mysql_data:/data/mysql
+  #     - redis_data:/data/redis
+  #   command: |
+  #     sh -c "
+  #     while true; do
+  #       echo 'Backup started at $(date)'
+  #       tar -czf /backup/backup-$(date +%Y%m%d-%H%M%S).tar.gz /data
+  #       echo 'Backup completed at $(date)'
+  #       sleep 86400
+  #     done
+  #     "
+  #   restart: unless-stopped
+  #   networks:
+  #     - ak-solar-network
+
+# Networks
+networks:
+  ak-solar-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# Volumes
+volumes:
+  redis_data:
+    driver: local
+  # mysql_data:
+  #   driver: local
+  # grafana_data:
+  #   driver: local
+
+# Development override
+# docker-compose.override.yml dosyası oluşturun:
+# version: '3.8'
+# services:
+#   web:
+#     volumes:
+#       - .:/usr/share/nginx/html
+#     environment:
+#       - NODE_ENV=development
+#   redis:
+#     ports:
+#       - "6379:6379" 

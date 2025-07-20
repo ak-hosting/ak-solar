@@ -1,0 +1,421 @@
+/* AK Solar - Güneş Enerjisi CSS */
+
+:root {
+    --solar-green: #0F9D58;
+    --solar-blue: #4285F4;
+    --solar-dark: #1a1a1a;
+    --solar-light: #f8f9fa;
+    --solar-gradient: linear-gradient(135deg, var(--solar-green) 0%, var(--solar-blue) 100%);
+    --solar-gradient-hover: linear-gradient(135deg, #0d8a4d 0%, #3a7bd5 100%);
+}
+
+/* Genel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar Stilleri */
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(15, 157, 88, 0.95) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.solar-gradient {
+    background: var(--solar-gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+.solar-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 157, 88, 0.8) 0%, rgba(66, 133, 244, 0.8) 100%);
+    z-index: 1;
+}
+
+.solar-gradient .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-stats .stat-item {
+    padding: 1rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.hero-stats .stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.hero-stats h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Buton Stilleri */
+.btn-solar {
+    background: var(--solar-gradient);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(15, 157, 88, 0.3);
+}
+
+.btn-solar:hover {
+    background: var(--solar-gradient-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 157, 88, 0.4);
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: var(--solar-green);
+}
+
+/* Hizmet Kartları */
+.service-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--solar-green);
+    margin-top: 1rem;
+}
+
+.service-card ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Hesaplayıcı Stilleri */
+.calculator-form {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-range {
+    height: 8px;
+    border-radius: 5px;
+    background: #e9ecef;
+}
+
+.form-range::-webkit-slider-thumb {
+    background: var(--solar-green);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.form-range::-moz-range-thumb {
+    background: var(--solar-green);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.saving-result {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.stat-box {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.stat-box h5 {
+    color: var(--solar-green);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Proje Kartları */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Hizmet kartları için görsel stilleri */
+.service-card img {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-info h5 {
+    color: var(--solar-green);
+    margin-bottom: 0.5rem;
+}
+
+.project-stats .badge {
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Form Stilleri */
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--solar-green);
+    box-shadow: 0 0 0 0.2rem rgba(15, 157, 88, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--solar-green);
+    border-color: var(--solar-green);
+}
+
+/* İletişim Kartları */
+.contact-info {
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background: var(--solar-dark) !important;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--solar-green);
+    transform: translateY(-3px);
+}
+
+/* Animasyonlar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .hero-stats h3 {
+        font-size: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .service-card {
+        margin-bottom: 2rem;
+    }
+    
+    .calculator-form {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .hero-stats .stat-item {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Loading Animasyonu */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Scroll Animasyonu */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Özel Efektler */
+.glow {
+    box-shadow: 0 0 20px rgba(15, 157, 88, 0.3);
+}
+
+.text-gradient {
+    background: var(--solar-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Form Validation Stilleri */
+.was-validated .form-control:valid {
+    border-color: var(--solar-green);
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+}
+
+/* Lightbox Özelleştirmeleri */
+.lb-data .lb-caption {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+    opacity: 0.8;
+}
+
+.lb-nav a.lb-prev:hover,
+.lb-nav a.lb-next:hover {
+    opacity: 1;
+}
+
+/* Print Stilleri */
+@media print {
+    .navbar,
+    .btn,
+    .social-links {
+        display: none !important;
+    }
+    
+    .solar-gradient {
+        background: white !important;
+        color: black !important;
+    }
+} 
