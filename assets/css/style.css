@@ -67,10 +67,53 @@ body {
     z-index: 2;
 }
 
+.hero-panel {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(7, 42, 46, 0.28) 0%, rgba(9, 35, 54, 0.18) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 24px 60px rgba(10, 35, 45, 0.22);
+    backdrop-filter: blur(10px);
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-panel h1 {
+    max-width: 12ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 12px 30px rgba(7, 33, 45, 0.32);
+}
+
+.hero-intro {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .hero-stats .stat-item {
     padding: 1rem;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    height: 100%;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease;
 }
@@ -83,6 +126,18 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+}
+
+.hero-stats p {
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 /* Buton Stilleri */
@@ -325,6 +380,11 @@ footer {
     .calculator-form {
         margin-bottom: 2rem;
     }
+
+    .hero-panel {
+        padding: 2.25rem 1.5rem;
+        border-radius: 22px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -339,6 +399,20 @@ footer {
     .btn-lg {
         padding: 10px 20px;
         font-size: 1rem;
+    }
+
+    .hero-panel {
+        padding: 1.75rem 1rem;
+    }
+
+    .hero-kicker {
+        font-size: 0.74rem;
+        letter-spacing: 0.05em;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        margin-right: 0 !important;
     }
 }
 
