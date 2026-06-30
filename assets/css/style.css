@@ -391,9 +391,31 @@ footer {
     .navbar-brand {
         font-size: 1.2rem;
     }
+
+    #hero .min-vh-100 {
+        min-height: auto !important;
+        padding-top: 5.75rem;
+        padding-bottom: 2.5rem;
+    }
     
     .hero-stats .stat-item {
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
+        padding: 0.85rem 0.75rem;
+    }
+
+    .hero-stats .fa-2x {
+        font-size: 1.35rem;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .hero-stats h3 {
+        font-size: 1.55rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .hero-stats p {
+        font-size: 0.82rem;
+        line-height: 1.35;
     }
     
     .btn-lg {
@@ -402,17 +424,40 @@ footer {
     }
 
     .hero-panel {
-        padding: 1.75rem 1rem;
+        padding: 1.35rem 0.9rem;
+        border-radius: 18px;
     }
 
     .hero-kicker {
+        display: none;
         font-size: 0.74rem;
         letter-spacing: 0.05em;
+    }
+
+    .hero-panel h1 {
+        font-size: 2.15rem;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .hero-intro {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem !important;
+    }
+
+    .hero-stats {
+        margin-bottom: 1rem !important;
+    }
+
+    .hero-actions {
+        gap: 0.65rem;
     }
 
     .hero-actions .btn {
         width: 100%;
         margin-right: 0 !important;
+        padding: 0.85rem 1rem;
+        font-size: 0.96rem;
     }
 }
 
