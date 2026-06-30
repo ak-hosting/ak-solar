@@ -1,23 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://ak-hosting.github.io/ak-solar/sitemap.xml
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /assets/php/
-Disallow: /logs/
-Disallow: /backup/
-
-# Allow important files
-Allow: /assets/css/
-Allow: /assets/js/
-Allow: /assets/images/
-Allow: /index.html
-Allow: /README.md
-
-# Crawl delay
-Crawl-delay: 1 
