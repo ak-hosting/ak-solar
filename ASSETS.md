@@ -11,36 +11,28 @@ Sie dient als Arbeitsgrundlage fuer Demo-, Lizenz- und Produktionspruefungen.
 - Typ: Gunes enerjisi demo web sitesi
 - Status: Portfolio-/Demo-Projekt
 
-## Wichtige Assets im Repository
+## Wichtige Runtime-Assets
 
-- Hero-, Hintergrund-, Projekt- und Servicebilder unter `assets/images/**`
-- `assets/images/logo.png`, `favicon.ico`
+- `assets/images/hero/solar-hero.svg`
+- `assets/images/services/installation.svg`, `maintenance.svg`, `consulting.svg`
+- `assets/images/projects/proje-1.svg` bis `proje-3.svg`
+- `assets/images/projects/proje-1-thumb.svg` bis `proje-3-thumb.svg`
 
-## Aktueller Quellenstatus
+## Quellenstatus
 
-Das Repository verweist in der README auf ein externes Unsplash-Banner, dokumentiert die lokalen Projektbilder aber nicht belastbar als Quelle.
-
-## Bereits im Repository dokumentiert
-
-- `README.md` nutzt ein externes Unsplash-Banner als Dokumentationsgrafik
-- Keine saubere repo-interne Quellenliste fuer die lokalen JPG-Dateien gefunden
+Die laufzeitrelevanten Frontend-Bilder wurden fuer dieses Demo-Projekt auf lokal erzeugte SVG-Placeholders umgestellt.
 
 ## Lokale Demo-Assets
 
-- `assets/images/favicon.svg` wurde als lokales Demo-Asset ergaenzt
-- `assets/images/og-image.svg` wurde als lokales Demo-Asset fuer Social Preview ergaenzt
+- alle oben genannten SVG-Dateien sind lokal erzeugte Demo-Assets
+- `assets/images/favicon.svg` ist ein lokales Demo-Asset
+- `assets/images/og-image.svg` ist ein lokales Demo-Asset fuer Social Preview
 
-## Risiko-Einschaetzung
+## Bewertung
 
-- Fuer Demo-Zwecke ist der aktuelle Stand ausreichend dokumentiert.
-- Fuer produktive oder kommerzielle Nutzung muessen Bildherkunft und Nutzungsrechte final verifiziert werden.
-- Nicht dokumentierte Fremdassets duerfen nicht stillschweigend als final freigegeben gelten.
-
-## Naechste Schritte
-
-- Lokale JPG-Dateien vor produktiver Nutzung quellenbezogen pruefen
-- Nach der Pruefung diese Datei mit einer finalen Herkunftsliste aktualisieren
+- Die bisher offene Herkunftsfrage der laufzeitrelevanten Frontend-Bilder ist damit fuer das aktuelle Demo geschlossen.
+- Eventuell noch vorhandene JPG-/PNG-Dateien im Repository gelten nicht mehr als benoetigte Runtime-Grundlage.
 
 ## Hinweis
 
-Diese Datei beschreibt den aktuell nachvollziehbaren Repo-Stand. Wo keine belastbare Quelle im Repository selbst vorliegt, wird bewusst nichts geraten oder erfunden.
+Diese Datei beschreibt den aktuellen Runtime-Stand. Fuer kuenftige echte Projektbilder muessen Herkunft und Nutzungsrechte erneut dokumentiert werden.

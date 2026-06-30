@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="Proje 3">
+  <rect width="1400" height="900" fill="#14532d"/>
+  <circle cx="1148" cy="180" r="162" fill="#38bdf8" opacity="0.18"/>
+  <circle cx="252" cy="702" r="180" fill="#38bdf8" opacity="0.12"/>
+  <rect x="98" y="108" width="1204" height="684" rx="32" fill="none" stroke="#ffffff" stroke-opacity="0.24" stroke-width="6"/>
+  <text x="140" y="378" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="81" font-weight="700">Proje 3</text>
+  <text x="140" y="486" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="37">Yerel demo placeholder</text>
+</svg>

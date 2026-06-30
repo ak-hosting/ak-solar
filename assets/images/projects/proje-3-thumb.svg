@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Proje 3">
+  <rect width="1200" height="800" fill="#14532d"/>
+  <circle cx="983" cy="160" r="144" fill="#38bdf8" opacity="0.18"/>
+  <circle cx="216" cy="624" r="160" fill="#38bdf8" opacity="0.12"/>
+  <rect x="84" y="96" width="1032" height="608" rx="32" fill="none" stroke="#ffffff" stroke-opacity="0.24" stroke-width="6"/>
+  <text x="120" y="336" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Proje 3</text>
+  <text x="120" y="432" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="33">Thumb demo asset</text>
+</svg>
