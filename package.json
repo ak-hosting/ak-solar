@@ -1,0 +1,1 @@
+{"name":"ak-solar","version":"2.0.0","private":true,"description":"Veri odaklı solar GitHub Pages şablonu","scripts":{"test":"node scripts/validate.mjs","lint":"node --check assets/js/script.js && node scripts/validate.mjs","build":"node scripts/validate.mjs"},"license":"MIT","homepage":"https://ak-hosting.github.io/ak-solar/","engines":{"node":">=18"}}

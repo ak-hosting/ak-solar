@@ -1,485 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AK Solar Demo | Portföy Güneş Enerjisi Web Sitesi</title>
-            <meta name="description" content="Güneş enerjisi firmaları için hazırlanmış portföy demo web sitesi. GES kurulumu, bakım ve teklif formları kurgusal örnek içeriklerdir.">
-    <meta name="author" content="A Koc">
-    <meta name="robots" content="index, follow">
-        <meta property="og:title" content="AK Solar Demo | Portföy Güneş Enerjisi Web Sitesi">
-        <meta property="og:description" content="Güneş enerjisi firmaları için hazırlanmış portföy demo web sitesi. GES kurulumu, bakım ve teklif formları kurgusal örnek içeriklerdir.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ak-hosting.github.io/ak-solar/">
-    <meta property="og:image" content="assets/images/og-image.svg">
-    <meta name="keywords" content="güneş enerjisi, GES kurulumu, solar panel, İstanbul, İzmir, Ankara, yenilenebilir enerji">
-    
-    <!-- Favicon -->
-        <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    
-    <!-- Bootstrap 5 & Font Awesome -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Lightbox CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-    <!-- Özel CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="canonical" href="https://ak-hosting.github.io/ak-solar/">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Güneş enerjisi projeleri için veri odaklı, erişilebilir ve MIT lisanslı web sitesi şablonu.">
+  <meta name="robots" content="index, follow"><meta name="theme-color" content="#f5b82e">
+  <meta property="og:title" content="AK Solar — Güneş Enerjisi Web Sitesi Şablonu">
+  <meta property="og:description" content="Şeffaf varsayımlarla çalışan açık kaynak güneş potansiyeli demosu.">
+  <meta property="og:type" content="website"><meta property="og:url" content="https://ak-hosting.github.io/ak-solar/">
+  <link rel="canonical" href="https://ak-hosting.github.io/ak-solar/"><link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css"><title>AK Solar — Güneş Enerjisi Web Sitesi Şablonu</title>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-solar fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-sun me-2"></i>AK SOLAR DEMO
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero">Ana Sayfa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Hizmetler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#calculator">Hesaplayıcı</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projeler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#offer">Teklif</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">İletişim</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="solar-gradient py-5" style="background-image: url('assets/images/hero/solar-hero.svg'); background-size: cover; background-position: center; position: relative;">
-        <div class="container text-center text-white">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-10 mx-auto">
-                    <div class="hero-panel">
-                        <span class="hero-kicker">Portfoy Demo Gunes Enerjisi Sunumu</span>
-                        <h1 class="display-3 fw-bold mb-3">Güneşin Enerjisini Keşfedin!</h1>
-                        <p class="lead hero-intro mb-4">Ornek panel senaryolari, demo teknik metinler ve teklif akisi ile kurumsal gunes enerjisi sunum yapisini tek ekranda gosteren portfoy kurgusu.</p>
-                        <div class="hero-stats row g-3 justify-content-center mb-4">
-                            <div class="col-md-4">
-                                <div class="stat-item">
-                                    <i class="fas fa-solar-panel fa-2x mb-2"></i>
-                                    <h3>500*</h3>
-                                    <p>Ornek Proje Senaryosu</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="stat-item">
-                                    <i class="fas fa-bolt fa-2x mb-2"></i>
-                                    <h3>50 MW*</h3>
-                                    <p>Ornek Kurulu Guc</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="stat-item">
-                                    <i class="fas fa-users fa-2x mb-2"></i>
-                                    <h3>1000*</h3>
-                                    <p>Demo Musteri Senaryosu</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hero-actions">
-                            <a href="#calculator" class="btn btn-light btn-lg me-3">
-                                <i class="fas fa-calculator me-2"></i>Tasarrufunuzu Hesaplayın
-                            </a>
-                            <a href="#offer" class="btn btn-outline-light btn-lg">
-                                <i class="fas fa-file-invoice me-2"></i>Ücretsiz Teklif Alın
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hizmetler Section -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">
-                <i class="fas fa-cogs me-2"></i>Hizmetlerimiz
-            </h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card text-center p-4 h-100">
-                        <img src="assets/images/services/installation.svg" alt="GES Kurulumu" class="img-fluid rounded mb-3" style="height: 200px; object-fit: cover; width: 100%;">
-                        <h4>Endüstriyel GES Kurulumu</h4>
-                        <p>500 kW+ tesisler için anahtar teslim çözümler. TEİAŞ standartlarına uygun kurulum.</p>
-                        <div class="price">₺550.000'den başlayan fiyatlar</div>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Proje tasarımı</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Lisans işlemleri</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Kurulum ve devreye alma</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card text-center p-4 h-100">
-                        <img src="assets/images/services/maintenance.svg" alt="Bakım ve İzleme" class="img-fluid rounded mb-3" style="height: 200px; object-fit: cover; width: 100%;">
-                        <h4>Bakım ve İzleme</h4>
-                        <p>7/24 uzaktan izleme sistemi ile maksimum verimlilik. Periyodik bakım hizmetleri.</p>
-                        <div class="price">₺12.000/ay bakım paketi</div>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Uzaktan izleme</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Periyodik bakım</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Acil müdahale</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card text-center p-4 h-100">
-                        <img src="assets/images/services/consulting.svg" alt="Enerji Danışmanlığı" class="img-fluid rounded mb-3" style="height: 200px; object-fit: cover; width: 100%;">
-                        <h4>Enerji Danışmanlığı</h4>
-                        <p>Enerji verimliliği analizi ve optimizasyon önerileri. Yatırım geri dönüş hesaplamaları.</p>
-                        <div class="price">₺28.000'den başlayan</div>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Enerji analizi</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Yatırım planı</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Teşvik danışmanlığı</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enerji Hesaplayıcı -->
-    <section id="calculator" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">
-                <i class="fas fa-calculator me-2"></i>Enerji Tasarruf Simülatörü
-            </h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="calculator-form p-4">
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Aylık Elektrik Tüketimi (kWh)</label>
-                            <input type="range" class="form-range" min="500" max="5000" value="1500" id="consumption">
-                            <div class="d-flex justify-content-between">
-                                <span>500 kWh</span>
-                                <span id="consumption-value">1500</span>
-                                <span>5000 kWh</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Kurulum Yeri</label>
-                            <select class="form-select" id="location">
-                                <option value="istanbul">İstanbul</option>
-                                <option value="izmir">İzmir</option>
-                                <option value="ankara">Ankara</option>
-                                <option value="antalya">Antalya</option>
-                                <option value="bursa">Bursa</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Çatı Tipi</label>
-                            <select class="form-select" id="roof-type">
-                                <option value="flat">Düz Çatı</option>
-                                <option value="sloped">Eğimli Çatı</option>
-                                <option value="ground">Yer Üstü</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Mevcut Elektrik Fiyatı (₺/kWh)</label>
-                            <input type="number" class="form-control" id="electricity-price" value="1.2" step="0.1">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card shadow-lg border-0">
-                        <div class="card-body text-center p-5">
-                            <h4 class="mb-4">
-                                <i class="fas fa-coins me-2"></i>Tahmini Tasarruf
-                            </h4>
-                            <div class="saving-result mb-4">
-                                <div class="display-4 text-success fw-bold" id="saving-result">₺1.850</div>
-                                <small class="text-muted">/ay</small>
-                            </div>
-                            
-                            <div class="row text-center mb-4">
-                                <div class="col-6">
-                                    <div class="stat-box">
-                                        <h5 id="panel-count">12</h5>
-                                        <small>Panel Sayısı</small>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="stat-box">
-                                        <h5 id="system-power">4.8 kW</h5>
-                                        <small>Sistem Gücü</small>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="row text-center mb-4">
-                                <div class="col-6">
-                                    <div class="stat-box">
-                                        <h5 id="yearly-production">6.200 kWh</h5>
-                                        <small>Yıllık Üretim</small>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="stat-box">
-                                        <h5 id="payback-period">4.2 yıl</h5>
-                                        <small>Geri Ödeme</small>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <button class="btn btn-solar btn-lg w-100" onclick="requestQuote()">
-                                <i class="fas fa-file-invoice me-2"></i>Detaylı Teklif Alın
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Proje Galerisi -->
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">
-                <i class="fas fa-images me-2"></i>Tamamlanan Projelerimiz
-            </h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <a href="assets/images/projects/proje-1.svg" data-lightbox="projects" data-title="İstanbul Fabrika GES - 1.2 MW">
-                            <img src="assets/images/projects/proje-1-thumb.svg" class="img-fluid rounded" alt="İstanbul Fabrika GES" loading="lazy">
-                        </a>
-                        <div class="project-info mt-3">
-                            <h5>İstanbul Fabrika Çatısı</h5>
-                            <p class="text-muted">1.2 MW • Yıllık 1.4M kWh üretim</p>
-                            <div class="project-stats">
-                                <span class="badge bg-success">₺2.1M Tasarruf/yıl</span>
-                                <span class="badge bg-primary">2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <a href="assets/images/projects/proje-2.svg" data-lightbox="projects" data-title="İzmir Ticaret Merkezi - 800 kW">
-                            <img src="assets/images/projects/proje-2-thumb.svg" class="img-fluid rounded" alt="İzmir Ticaret Merkezi" loading="lazy">
-                        </a>
-                        <div class="project-info mt-3">
-                            <h5>İzmir Ticaret Merkezi</h5>
-                            <p class="text-muted">800 kW • Yıllık 950k kWh üretim</p>
-                            <div class="project-stats">
-                                <span class="badge bg-success">₺1.4M Tasarruf/yıl</span>
-                                <span class="badge bg-primary">2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <a href="assets/images/projects/proje-3.svg" data-lightbox="projects" data-title="Ankara Üniversite Kampüsü - 500 kW">
-                            <img src="assets/images/projects/proje-3-thumb.svg" class="img-fluid rounded" alt="Ankara Üniversite Kampüsü" loading="lazy">
-                        </a>
-                        <div class="project-info mt-3">
-                            <h5>Ankara Üniversite Kampüsü</h5>
-                            <p class="text-muted">500 kW • Yıllık 600k kWh üretim</p>
-                            <div class="project-stats">
-                                <span class="badge bg-success">₺850k Tasarruf/yıl</span>
-                                <span class="badge bg-primary">2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Teklif Formu -->
-    <section id="offer" class="py-5 solar-gradient text-white">
-        <div class="container">
-            <h2 class="text-center mb-4">
-                <i class="fas fa-file-invoice me-2"></i>Ücretsiz Proje Teklifi
-            </h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <form id="quote-form" class="needs-validation" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Ad Soyad *</label>
-                                    <input type="text" class="form-control" required>
-                                    <div class="invalid-feedback">Lütfen adınızı giriniz.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Telefon *</label>
-                                    <input type="tel" class="form-control" required>
-                                    <div class="invalid-feedback">Lütfen telefon numaranızı giriniz.</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">E-posta *</label>
-                                    <input type="email" class="form-control" required>
-                                    <div class="invalid-feedback">Lütfen geçerli bir e-posta adresi giriniz.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Kurulum Yeri *</label>
-                                    <select class="form-select" required>
-                                        <option value="">Şehir Seçiniz</option>
-                                        <option value="istanbul">İstanbul</option>
-                                        <option value="izmir">İzmir</option>
-                                        <option value="ankara">Ankara</option>
-                                        <option value="antalya">Antalya</option>
-                                        <option value="bursa">Bursa</option>
-                                        <option value="diger">Diğer</option>
-                                    </select>
-                                    <div class="invalid-feedback">Lütfen kurulum yerini seçiniz.</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Aylık Tüketim (kWh) *</label>
-                                    <input type="number" class="form-control" placeholder="1500" required>
-                                    <div class="invalid-feedback">Lütfen aylık tüketiminizi giriniz.</div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Çatı Alanı (m²)</label>
-                                    <input type="number" class="form-control" placeholder="100">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label class="form-label">Hizmet Türü</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="kurulum" id="service1">
-                                <label class="form-check-label" for="service1">GES Kurulumu</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="bakim" id="service2">
-                                <label class="form-check-label" for="service2">Bakım Hizmeti</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="danismanlik" id="service3">
-                                <label class="form-check-label" for="service3">Enerji Danışmanlığı</label>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label class="form-label">Ek Notlar</label>
-                            <textarea class="form-control" rows="3" placeholder="Projeniz hakkında ek bilgiler..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-light btn-lg w-100">
-                            <i class="fas fa-paper-plane me-2"></i>Teklif Gönder
-                        </button>
-                    
-    <p class="small mt-3 mb-0 demo-form-hint" style="opacity: 0.85;">Bu form, demo senaryosu icin hazirlanmistir. Gercek bir rezervasyon, tedavi, uyelik veya hizmet kaydi olusturmaz. Ayrintilar icin <a href="datenschutz.html">Gizlilik</a> ve <a href="impressum.html">Yasal Bilgilendirme</a>.</p>
-</form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- İletişim Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">
-                <i class="fas fa-phone me-2"></i>İletişim
-            </h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="contact-info text-center mb-4">
-                        <i class="fas fa-map-marker-alt fa-2x text-success mb-3"></i>
-                        <h5>Adres</h5>
-                        <p>Merkez Mahallesi, Solar Caddesi No:123<br>Şişli / İstanbul</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-info text-center mb-4">
-                        <i class="fas fa-phone fa-2x text-primary mb-3"></i>
-                        <h5>Telefon</h5>
-                        <p>+90 (212) 555 0123<br>+90 (532) 123 4567</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-info text-center mb-4">
-                        <i class="fas fa-envelope fa-2x text-info mb-3"></i>
-                        <h5>E-posta</h5>
-                        <p>ak@ak-pro.com<br>teknik@ak-pro.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5><i class="fas fa-sun me-2"></i>AK SOLAR DEMO</h5>
-                    <p>Türkiye'nin Güneş Enerjisi Web Şablonu</p>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p><strong>Demo projesinin oluşturucusu:</strong> a.koc - <a href="https://github.com/ak-hosting" class="text-white">GitHub</a></p>
-                    <p><strong>Gerçek iletişim kişisi:</strong> <a href="mailto:ak@ak-pro.com" class="text-white">ak@ak-pro.com</a></p>
-                    <p class="small text-muted">© 2024 AK Solar Demo. Tüm hakları saklıdır.</p>
-                </div>
-            </div>
-        </div>
-    
-    <div class="container pt-3 border-top border-secondary mt-3 demo-legal-links">
-        <div class="row g-3 align-items-center">
-            <div class="col-lg-8">
-                <p class="small text-white-50 mb-1">Bu web sitesi portföy amaçlı kurgusal bir demo projedir. Gösterilen marka, yorumlar, fiyatlar, referanslar ve iletişim senaryoları örnekleme amaçlıdır.</p>
-                <p class="small text-white-50 mb-0">Gerçek sorumlu kişi: A Koc - <a href="mailto:ak@ak-pro.com" class="text-white">ak@ak-pro.com</a> - <a href="tel:+905301615609" class="text-white">+90 530 161 56 09</a></p>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-                <a href="impressum.html" class="text-white me-3">Yasal Bilgilendirme</a>
-                <a href="datenschutz.html" class="text-white">Gizlilik</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-    <!-- Scriptler -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script src="assets/js/calculator.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-</html> 
+<a class="skip" href="#main">İçeriğe geç</a>
+<div class="demo"><strong>Açık kaynak demo</strong><span>Sonuçlar temsili varsayımlardır; keşif, teklif veya mühendislik hesabı değildir.</span></div>
+<header class="header">
+  <a class="logo" href="#top"><span class="sun">✦</span><span>AK SOLAR<small>solar potential studio</small></span></a>
+  <button class="menu" data-menu aria-expanded="false" aria-controls="nav"><span>Menü</span><i></i></button>
+  <nav id="nav" data-nav><a href="#yaklasim">Yaklaşım</a><a href="#hesap">Potansiyel</a><a href="#surec">Süreç</a><a class="nav-cta" href="https://github.com/ak-hosting/ak-solar">Kodu aç</a></nav>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-copy"><p class="label">GÜNEŞ / ÇATI / VERİ</p><h1>Çatınızın güneş hikâyesini görünür kılın.</h1><p class="lead">Güneş enerjisi firmaları için hazırlanmış bu bağımsız şablon, karmaşık satış vaatleri yerine varsayımları, süreci ve karar noktalarını açıkça anlatır.</p><div class="actions"><a class="button dark" href="#hesap">Potansiyeli dene</a><a class="text-link" href="#yaklasim">Şablonu incele →</a></div></div>
+  <div class="solar-map" aria-label="Temsili güneş potansiyeli görselleştirmesi">
+    <div class="orbit"><span>GÜNEŞLENME</span><strong>4,6</strong><small>kWh/m²/gün · örnek</small></div>
+    <div class="roof"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="map-note"><b>01</b><p>Çatı düzlemi<br><small>temsili geometri</small></p></div>
+  </div>
+</section>
+<section class="ticker"><p>Yerel CSS + JS</p><p>Kişisel veri yok</p><p>Harici izleme yok</p><p>MIT lisansı</p></section>
+<section class="approach" id="yaklasim">
+  <div class="section-head"><p class="label">KARAR MİMARİSİ</p><h2>Önce doğru sorular.</h2><p>Üretim sitesinde sonuçlar saha keşfi, gölgelenme, statik uygunluk, güncel tarife ve yetkili mühendislik hesabıyla doğrulanmalıdır.</p></div>
+  <div class="question-grid">
+    <article><b>01</b><h3>Alan ne kadar?</h3><p>Kullanılabilir çatı alanı, engeller ve güvenlik mesafeleri kapasiteyi belirler.</p></article>
+    <article><b>02</b><h3>Yön ve eğim nasıl?</h3><p>Panel yerleşimi ile yerel ışınım verisi üretim tahmininin temelidir.</p></article>
+    <article><b>03</b><h3>Tüketim ne zaman?</h3><p>Gündüz yük profili, öz tüketim yaklaşımını toplam tüketimden daha iyi açıklar.</p></article>
+  </div>
+</section>
+<section class="calculator" id="hesap">
+  <div class="calc-intro"><p class="label">ETKİLEŞİMLİ DEMO</p><h2>Varsayımları değiştirin, ölçeğin nasıl değiştiğini görün.</h2><p>Bu basitleştirilmiş eğitim aracı para, geri ödeme süresi veya garanti üretmez. Girdi tarayıcıda hesaplanır; gönderilmez ve saklanmaz.</p></div>
+  <form class="calc-form" data-calculator>
+    <label for="area">Kullanılabilir çatı alanı <output id="area-output">120 m²</output></label>
+    <input id="area" name="area" type="range" min="30" max="1000" step="10" value="120">
+    <label for="sun-hours">Günlük eşdeğer güneşlenme</label>
+    <select id="sun-hours" name="sunHours"><option value="3.8">3,8 saat · düşük senaryo</option><option value="4.6" selected>4,6 saat · orta senaryo</option><option value="5.2">5,2 saat · yüksek senaryo</option></select>
+    <label for="orientation">Yerleşim katsayısı</label>
+    <select id="orientation" name="orientation"><option value=".78">Temkinli · %78</option><option value=".86" selected>Dengeli · %86</option><option value=".92">Uygun · %92</option></select>
+  </form>
+  <div class="result" aria-live="polite">
+    <p>Temsili sistem ölçeği</p><strong data-power>12,0 kWp</strong>
+    <div><span>Yıllık üretim aralığı</span><b data-production>15.600–19.100 kWh</b></div>
+    <div><span>Panel alan varsayımı</span><b>10 m² / kWp</b></div>
+    <small>Yuvarlatılmış demo sonucu · saha veya yatırım kararı için kullanmayın.</small>
+  </div>
+</section>
+<section class="process" id="surec">
+  <div class="section-head"><p class="label">ÖRNEK PROJE AKIŞI</p><h2>Tekliften önce görünür süreç.</h2></div>
+  <ol><li><span>01</span><div><h3>Ön bilgi</h3><p>Çatı, tüketim profili ve hedef doğrulanır.</p></div></li><li><span>02</span><div><h3>Saha keşfi</h3><p>Ölçü, gölge, taşıyıcı sistem ve bağlantı koşulları incelenir.</p></div></li><li><span>03</span><div><h3>Mühendislik</h3><p>Yerleşim, ekipman ve üretim modeli belgelenir.</p></div></li><li><span>04</span><div><h3>Karar dosyası</h3><p>Varsayımlar, riskler, kapsam ve sonraki adımlar açıkça sunulur.</p></div></li></ol>
+</section>
+<section class="download"><p class="label">İNDİR · UYARLA · YAYINLA</p><h2>Kendi solar markanız için sağlam bir başlangıç.</h2><p>Metinleri yalnızca doğrulanmış hizmet, yetki, ekipman ve bölgesel verilerle değiştirin.</p><a class="button dark" href="https://github.com/ak-hosting/ak-solar">GitHub repository</a></section>
+</main>
+<footer><a class="logo" href="#top"><span class="sun">✦</span><span>AK SOLAR<small>MIT demo şablonu</small></span></a><p>Gerçek bir enerji firması veya teklif sistemi değildir.</p><div><a href="impressum.html">Yasal bilgi</a><a href="datenschutz.html">Gizlilik</a></div></footer>
+<script src="assets/js/script.js" defer></script>
+</body></html>
